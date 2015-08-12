@@ -3,18 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>smui | guoml的博客</title>
+  <title>Javascript中addEventListener和attachEvent的区别 | guoml的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="smui是基于Zepto.js的移动端组件库，将在开发中经常用到的功能也做为一个组件，开发人员在利用smui做开发时不仅可以直接使用，而且在扩展UI组件时也可以使用已有的组件。同时smui组件支持插件，可以方便的对UI组件做扩展。目前提供的组件可以分为两类，纯js的功能组件和UI组件。GitHub;">
+  <meta name="description" content="在利用javascript为DOM Element添加事件处理程序时，如果要想下兼容IE6，7时，就不得不考虑addEventListener与attachEvent的异同。
+1.首先说下addEventListener，现在IE9+,chrome,firefox等都支持。所有的DOM节点包含addEventListener,并且接受3个参数：
+HTMLElement.addEventListen">
 <meta property="og:type" content="article">
-<meta property="og:title" content="smui">
-<meta property="og:url" content="http://www.guoml.com/2015/07/14/smui/index.html">
+<meta property="og:title" content="Javascript中addEventListener和attachEvent的区别">
+<meta property="og:url" content="http://www.guoml.com/2015/08/12/jsEventcompare/index.html">
 <meta property="og:site_name" content="guoml的博客">
-<meta property="og:description" content="smui是基于Zepto.js的移动端组件库，将在开发中经常用到的功能也做为一个组件，开发人员在利用smui做开发时不仅可以直接使用，而且在扩展UI组件时也可以使用已有的组件。同时smui组件支持插件，可以方便的对UI组件做扩展。目前提供的组件可以分为两类，纯js的功能组件和UI组件。GitHub;">
-<meta property="og:updated_time" content="2015-08-12T12:38:12.000Z">
+<meta property="og:description" content="在利用javascript为DOM Element添加事件处理程序时，如果要想下兼容IE6，7时，就不得不考虑addEventListener与attachEvent的异同。
+1.首先说下addEventListener，现在IE9+,chrome,firefox等都支持。所有的DOM节点包含addEventListener,并且接受3个参数：
+HTMLElement.addEventListen">
+<meta property="og:updated_time" content="2015-08-12T13:10:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="smui">
-<meta name="twitter:description" content="smui是基于Zepto.js的移动端组件库，将在开发中经常用到的功能也做为一个组件，开发人员在利用smui做开发时不仅可以直接使用，而且在扩展UI组件时也可以使用已有的组件。同时smui组件支持插件，可以方便的对UI组件做扩展。目前提供的组件可以分为两类，纯js的功能组件和UI组件。GitHub;">
+<meta name="twitter:title" content="Javascript中addEventListener和attachEvent的区别">
+<meta name="twitter:description" content="在利用javascript为DOM Element添加事件处理程序时，如果要想下兼容IE6，7时，就不得不考虑addEventListener与attachEvent的异同。
+1.首先说下addEventListener，现在IE9+,chrome,firefox等都支持。所有的DOM节点包含addEventListener,并且接受3个参数：
+HTMLElement.addEventListen">
   
     <link rel="alternative" href="/atom.xml" title="guoml的博客" type="application/atom+xml">
   
@@ -163,11 +169,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-smui" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-jsEventcompare" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/07/14/smui/" class="article-date">
-  	<time datetime="2015-07-14T07:12:46.000Z" itemprop="datePublished">2015-07-14</time>
+      <a href="/2015/08/12/jsEventcompare/" class="article-date">
+  	<time datetime="2015-08-12T13:01:05.000Z" itemprop="datePublished">2015-08-12</time>
 </a>
     </div>
   
@@ -180,7 +186,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      smui
+      Javascript中addEventListener和attachEvent的区别
     </h1>
   
 
@@ -189,7 +195,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/smui/">smui</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
 	</div>
 
         
@@ -200,7 +206,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>smui是基于Zepto.js的移动端组件库，将在开发中经常用到的功能也做为一个组件，开发人员在利用smui做开发时不仅可以直接使用，而且在扩展UI组件时也可以使用已有的组件。同时smui组件支持插件，可以方便的对UI组件做扩展。目前提供的组件可以分为两类，纯js的功能组件和UI组件。<a href="https://github.com/ybbjegj/smui" target="_blank" rel="external">GitHub</a>;</p>
+        <p>在利用javascript为DOM Element添加事件处理程序时，如果要想下兼容IE6，7时，就不得不考虑addEventListener与attachEvent的异同。</p>
+<h3 id="1-首先说下addEventListener，现在IE9+,chrome,firefox等都支持。">1.首先说下addEventListener，现在IE9+,chrome,firefox等都支持。</h3><p>所有的DOM节点包含addEventListener,并且接受3个参数：</p>
+<p>HTMLElement.addEventListener(type,function,bool);</p>
+<p>type：处理事件的名称，如 “click”等。</p>
+<p>funciton：事件的处理程序。</p>
+<p>bool：true代表的事件在捕获阶段触发，false代表在冒泡阶段出发（默认值）。</p>
+<h3 id="2-attachEvent是IE8及更早的IE支持的方式，由于只支持事件冒泡，所以只接受两个参数：">2.attachEvent是IE8及更早的IE支持的方式，由于只支持事件冒泡，所以只接受两个参数：</h3><p>HTMLElement.attachEvent(type,function);</p>
+<p>type：处理事件的名称，如 “onclick”等。（注意与addEventListener的区别）</p>
+<p>funciton：事件的处理程序。 </p>
+<h3 id="addEventListener和attachEvent的区别在于：">addEventListener和attachEvent的区别在于：</h3><p>1.很明显适用的浏览器不同。<br>2.前者可以在事件流的不同阶段触发，后者只能在冒泡阶段触发。<br>3.前者的事件名不用加on，后者则需要。<br>4.为统一个事件添加多个处理程序时，处理程序的执行顺序不同。前者是按添加顺序，后者与之相反。<br>5.两者的作用域不同。前者是在其所属的DOM的作用域中运行，后者会在全局作用域中运行。</p>
 
       
     </div>
@@ -210,18 +225,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/07/14/str-include/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          巧妙的实现短字符串中的字母是否都包含在长字符串中
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/07/14/me/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">这就是我</div>
+    <a href="/2015/08/12/containing-block/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">css中的包含块</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -250,7 +256,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="smui" data-title="smui" data-url="http://www.guoml.com/2015/07/14/smui/"></div>
+	<div class="ds-thread" data-thread-key="jsEventcompare" data-title="Javascript中addEventListener和attachEvent的区别" data-url="http://www.guoml.com/2015/08/12/jsEventcompare/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

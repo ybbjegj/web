@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.guoml.com//"/>
-  <updated>2015-08-12T12:34:32.000Z</updated>
+  <updated>2015-08-12T13:10:33.000Z</updated>
   <id>http://www.guoml.com//</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Javascript中addEventListener和attachEvent的区别]]></title>
+    <link href="http://www.guoml.com/2015/08/12/jsEventcompare/"/>
+    <id>http://www.guoml.com/2015/08/12/jsEventcompare/</id>
+    <published>2015-08-12T13:01:05.000Z</published>
+    <updated>2015-08-12T13:10:33.000Z</updated>
+    <content type="html"><![CDATA[<p>在利用javascript为DOM Element添加事件处理程序时，如果要想下兼容IE6，7时，就不得不考虑addEventListener与attachEvent的异同。</p>
+<h3 id="1-首先说下addEventListener，现在IE9+,chrome,firefox等都支持。">1.首先说下addEventListener，现在IE9+,chrome,firefox等都支持。</h3><p>所有的DOM节点包含addEventListener,并且接受3个参数：</p>
+<p>HTMLElement.addEventListener(type,function,bool);</p>
+<p>type：处理事件的名称，如 “click”等。</p>
+<p>funciton：事件的处理程序。</p>
+<p>bool：true代表的事件在捕获阶段触发，false代表在冒泡阶段出发（默认值）。</p>
+<h3 id="2-attachEvent是IE8及更早的IE支持的方式，由于只支持事件冒泡，所以只接受两个参数：">2.attachEvent是IE8及更早的IE支持的方式，由于只支持事件冒泡，所以只接受两个参数：</h3><p>HTMLElement.attachEvent(type,function);</p>
+<p>type：处理事件的名称，如 “onclick”等。（注意与addEventListener的区别）</p>
+<p>funciton：事件的处理程序。 </p>
+<h3 id="addEventListener和attachEvent的区别在于：">addEventListener和attachEvent的区别在于：</h3><p>1.很明显适用的浏览器不同。<br>2.前者可以在事件流的不同阶段触发，后者只能在冒泡阶段触发。<br>3.前者的事件名不用加on，后者则需要。<br>4.为统一个事件添加多个处理程序时，处理程序的执行顺序不同。前者是按添加顺序，后者与之相反。<br>5.两者的作用域不同。前者是在其所属的DOM的作用域中运行，后者会在全局作用域中运行。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在利用javascript为DOM Element添加事件处理程序时，如果要想下兼容IE6，7时，就不得不考虑addEventListener与attachEvent的异同。</p>
+<h3 id="1-首先说下addEventListener，现在IE9+,chrome,]]>
+    </summary>
+    
+      <category term="js" scheme="http://www.guoml.com/tags/js/"/>
+    
+      <category term="技术" scheme="http://www.guoml.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[css中的包含块]]></title>
@@ -338,10 +366,39 @@
     <link href="http://www.guoml.com/2015/07/14/me/"/>
     <id>http://www.guoml.com/2015/07/14/me/</id>
     <published>2015-07-14T07:12:46.000Z</published>
-    <updated>2015-07-14T12:18:52.000Z</updated>
-    <content type="html"></content>
+    <updated>2015-08-12T12:46:52.000Z</updated>
+    <content type="html"><![CDATA[<p>职业：前端攻城师</p>
+<p>学历：本科</p>
+<p>工龄：4年 </p>
+<p>目前工作：阿里</p>
+<p>坐标：北京</p>
+<p>Email:ybbjegj@sina.com</p>
+<p>QQ：874666844</p>
+<p>自我评价：</p>
+<ol>
+<li><p>自学能力强，能够快速学习和掌握新的技术。 </p>
+</li>
+<li><p>有较强的分析能力.能够适应快节奏的工作,有较强的实战经验和实际操作能力。 </p>
+</li>
+<li><p>在项目开发过程中，培养了我的团队精神。 </p>
+</li>
+<li><p>在参加工作之前和参加工作之后的一段时间内时做后端开发，但是后来因工作需要自学前端，熟练使用C#，asp.net，MVC，XMl，XSLT，Javascript，JQuery，Zepto, sea.js，Vue.js，Html，CSS2，CSS3，HTML5，SQL等相关技术，了解Node。 </p>
+</li>
+<li><p>热爱软件行业，熟悉面向对象的分析、设计和编程思想、技术较全面。有后台开发经验，能很好的和后台开发人员进行对接。 </p>
+</li>
+</ol>
+]]></content>
     <summary type="html">
-    
+    <![CDATA[<p>职业：前端攻城师</p>
+<p>学历：本科</p>
+<p>工龄：4年 </p>
+<p>目前工作：阿里</p>
+<p>坐标：北京</p>
+<p>Email:ybbjegj@sina.com</p>
+<p>QQ：874666844</p>
+<p>自我评价：</p>
+<ol>
+<]]>
     </summary>
     
       <category term="Me" scheme="http://www.guoml.com/tags/Me/"/>

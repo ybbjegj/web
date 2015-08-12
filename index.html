@@ -104,7 +104,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Me/" style="font-size: 10px;">Me</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/smui/" style="font-size: 10px;">smui</a> <a href="/tags/技术/" style="font-size: 20px;">技术</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/组件化/" style="font-size: 10px;">组件化</a>
+						<a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Me/" style="font-size: 10px;">Me</a> <a href="/tags/js/" style="font-size: 15px;">js</a> <a href="/tags/smui/" style="font-size: 10px;">smui</a> <a href="/tags/技术/" style="font-size: 20px;">技术</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/组件化/" style="font-size: 10px;">组件化</a>
 					</div>
 				</section>
 				
@@ -163,6 +163,70 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-jsEventcompare" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/12/jsEventcompare/" class="article-date">
+  	<time datetime="2015-08-12T13:01:05.000Z" itemprop="datePublished">2015-08-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/12/jsEventcompare/">Javascript中addEventListener和attachEvent的区别</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在利用javascript为DOM Element添加事件处理程序时，如果要想下兼容IE6，7时，就不得不考虑addEventListener与attachEvent的异同。</p>
+<h3 id="1-首先说下addEventListener，现在IE9+,chrome,firefox等都支持。">1.首先说下addEventListener，现在IE9+,chrome,firefox等都支持。</h3><p>所有的DOM节点包含addEventListener,并且接受3个参数：</p>
+<p>HTMLElement.addEventListener(type,function,bool);</p>
+<p>type：处理事件的名称，如 “click”等。</p>
+<p>funciton：事件的处理程序。</p>
+<p>bool：true代表的事件在捕获阶段触发，false代表在冒泡阶段出发（默认值）。</p>
+<h3 id="2-attachEvent是IE8及更早的IE支持的方式，由于只支持事件冒泡，所以只接受两个参数：">2.attachEvent是IE8及更早的IE支持的方式，由于只支持事件冒泡，所以只接受两个参数：</h3><p>HTMLElement.attachEvent(type,function);</p>
+<p>type：处理事件的名称，如 “onclick”等。（注意与addEventListener的区别）</p>
+<p>funciton：事件的处理程序。 </p>
+<h3 id="addEventListener和attachEvent的区别在于：">addEventListener和attachEvent的区别在于：</h3><p>1.很明显适用的浏览器不同。<br>2.前者可以在事件流的不同阶段触发，后者只能在冒泡阶段触发。<br>3.前者的事件名不用加on，后者则需要。<br>4.为统一个事件添加多个处理程序时，处理程序的执行顺序不同。前者是按添加顺序，后者与之相反。<br>5.两者的作用域不同。前者是在其所属的DOM的作用域中运行，后者会在全局作用域中运行。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-containing-block" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -655,7 +719,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>职业：前端攻城师</p>
+<p>学历：本科</p>
+<p>工龄：4年 </p>
+<p>目前工作：阿里</p>
+<p>坐标：北京</p>
+<p>Email:ybbjegj@sina.com</p>
+<p>QQ：874666844</p>
+<p>自我评价：</p>
+<ol>
+<li><p>自学能力强，能够快速学习和掌握新的技术。 </p>
+</li>
+<li><p>有较强的分析能力.能够适应快节奏的工作,有较强的实战经验和实际操作能力。 </p>
+</li>
+<li><p>在项目开发过程中，培养了我的团队精神。 </p>
+</li>
+<li><p>在参加工作之前和参加工作之后的一段时间内时做后端开发，但是后来因工作需要自学前端，熟练使用C#，asp.net，MVC，XMl，XSLT，Javascript，JQuery，Zepto, sea.js，Vue.js，Html，CSS2，CSS3，HTML5，SQL等相关技术，了解Node。 </p>
+</li>
+<li><p>热爱软件行业，熟悉面向对象的分析、设计和编程思想、技术较全面。有后台开发经验，能很好的和后台开发人员进行对接。 </p>
+</li>
+</ol>
+
       
     </div>
     
